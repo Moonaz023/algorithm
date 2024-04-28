@@ -1,5 +1,3 @@
-/ Ford - Fulkerson algorith in C
-
 #include <stdio.h>
 
 #define A 0
@@ -35,7 +33,7 @@ int dequeue() {
   return x;
 }
 
-// Using BFS as a searching algorithm
+// BFS as a searching algorithm
 int bfs(int start, int target) {
   int u, v;
   for (u = 0; u < n; u++) {
@@ -56,7 +54,6 @@ int bfs(int start, int target) {
   return color[target] == C;
 }
 
-// Applying fordfulkerson algorithm
 int fordFulkerson(int source, int sink) {
   int i, j, u;
   int max_flow = 0;
@@ -65,8 +62,6 @@ int fordFulkerson(int source, int sink) {
       flow[i][j] = 0;
     }
   }
-
-  // Updating the residual values of edges
   while (bfs(source, sink)) {
     int increment = O;
     for (u = n - 1; pred[u] >= 0; u = pred[u]) {
@@ -76,7 +71,6 @@ int fordFulkerson(int source, int sink) {
       flow[pred[u]][u] += increment;
       flow[u][pred[u]] -= increment;
     }
-    // Adding the path flows
     max_flow += increment;
   }
   return max_flow;
