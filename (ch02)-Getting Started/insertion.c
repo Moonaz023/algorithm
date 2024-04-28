@@ -1,8 +1,5 @@
-// C program for insertion sort
 #include <math.h>
 #include <stdio.h>
-
-/* Function to sort an array using insertion sort*/
 void insertionSort(int arr[], int n)
 {
 	int i, key, j;
@@ -20,8 +17,6 @@ void insertionSort(int arr[], int n)
 		arr[j + 1] = key;
 	}
 }
-
-// A utility function to print an array of size n
 void printArray(int arr[], int n)
 {
 	int i;
@@ -30,7 +25,6 @@ void printArray(int arr[], int n)
 	printf("\n");
 }
 
-/* Driver program to test insertion sort */
 int main()
 {
 	int arr[] = { 12, 11, 13, 5, 6 };
