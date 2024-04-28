@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-//function to print the array
 void printarray(int arr[], int size)
 {
     int i,j;
@@ -11,7 +10,7 @@ void printarray(int arr[], int size)
     printf("\n");
 }
 
-//function to swap the variables
+
 void swap(int *a, int *b)
 {
     int temp;
@@ -20,7 +19,6 @@ void swap(int *a, int *b)
     *b = temp;
 }
 
-//permutation function
 void permutation(int *arr, int start, int end)
 {
     if(start==end)
@@ -46,7 +44,7 @@ void permutation(int *arr, int start, int end)
 
 int main()
 {
-    //taking input to the array
+    
     int size;
     printf("Enter the size of array\n");
     scanf("%d",&size);
@@ -54,7 +52,7 @@ int main()
     int arr[size];
     for(i=0;i<size;i++)
         scanf("%d",&arr[i]);
-    //calling permutation function
+    
     permutation(arr, 0, size-1);
     return 0;
 }
