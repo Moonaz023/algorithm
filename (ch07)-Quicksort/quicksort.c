@@ -1,8 +1,5 @@
-/* QuickSort */
 #include <stdio.h>
 
-
-// A utility function to swap two elements
 void swap(int* a, int* b)
 {
 	int t = *a;
@@ -26,7 +23,7 @@ int partition(int arr[], int low, int high)
 	for (int j = low; j <= high - 1; j++) {
 		// If current element is smaller than the pivot
 		if (arr[j] < pivot) {
-			i++; // increment index of smaller element
+			i++; 
 			swap(&arr[i], &arr[j]);
 		}
 	}
@@ -34,10 +31,7 @@ int partition(int arr[], int low, int high)
 	return (i + 1);
 }
 
-/* The main function that implements QuickSort
-arr[] --> Array to be sorted,
-low --> Starting index,
-high --> Ending index */
+
 void quickSort(int arr[], int low, int high)
 {
 	if (low < high) {
@@ -52,7 +46,7 @@ void quickSort(int arr[], int low, int high)
 	}
 }
 
-/* Function to print an array */
+
 void printArray(int arr[], int size)
 {
 	int i;
@@ -62,7 +56,6 @@ void printArray(int arr[], int size)
 
 }
 
-// Driver Code
 int main()
 {
 	int arr[] = { 10, 7, 8, 9, 1, 5 };
